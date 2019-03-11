@@ -57,56 +57,46 @@ INSERT INTO movies (title, year, show_time) VALUES ('Thor: Ragnarok', 2017, '17:
 INSERT INTO movies (title, year, show_time) VALUES ('Black Panther', 2018, '22:00');
 
 
+-- SELECT * FROM movies;
+--
+-- SELECT name FROM people;
+--
+-- UPDATE people SET name = 'Mateusz Stanczak' WHERE name = 'Montgomery Stanczak';
+--
+-- SELECT name FROM people;
+-- SELECT name FROM people WHERE name = 'Mateusz Stanczak';
+--
+-- SELECT name FROM people WHERE name = 'Myriam Boran';
+--
+-- DELETE FROM movies WHERE title = 'Batman Begins';
+-- SELECT * FROM movies;
+--
+-- INSERT INTO people (
+--   name
+-- )
+-- VALUES (
+-- 'Colin Farquhar'
+-- );
+-- SELECT name FROM people;
+--
+-- DELETE FROM people WHERE name = 'Jordan Davidson';
+-- SELECT name FROM people;
+--
+-- INSERT INTO movies (
+--   title,
+--   year,
+--   show_time
+-- )
+-- VALUES (
+-- 'Avengers: Infinity War',
+-- 2018,
+-- '00:00'
+-- );
+-- SELECT * FROM movies;
+
+UPDATE movies SET show_time = '19:15' WHERE title = 'Guardians of the Galaxy 2';
 SELECT * FROM movies;
 
-SELECT name FROM people;
-
-UPDATE people SET name = 'Mateusz Stanczak' WHERE name = 'Montgomery Stanczak';
-
-SELECT name FROM people;
-SELECT name FROM people WHERE name = 'Mateusz Stanczak';
-
-SELECT name FROM people WHERE name = 'Myriam Boran';
-
-DELETE FROM movies WHERE title = 'Batman Begins';
-SELECT * FROM movies;
-
-INSERT INTO people (
-  name
-)
-VALUES (
-'Colin Farquhar'
-);
-SELECT name FROM people;
-
-DELETE FROM people WHERE name = 'Jordan Davidson';
-SELECT name FROM people;
-
-INSERT INTO movies (
-  title,
-  year,
-  show_time
-)
-VALUES (
-'Avengers: Infinity War',
-2018,
-'00:00'
-);
-SELECT * FROM movies;
-
-UPDATE movies SET (
-title,
-year,
-show_time
-)
-=
-(
-'Guardians of the Galaxy 2',
-2017,
-'00:45'
-)
-WHERE show_time = '22:45';
-SELECT * FROM movies;
 
 
 
@@ -328,35 +318,36 @@ id |                title                | year | show_time
 
 
 
-8. The cinema would also like to make the Guardians movies a back to back feature. Find out the show time of "Guardians of the Galaxy" and set the show time of "Guardians of the Galaxy 2" to start two hours later.
+9. The cinema would also like to make the Guardians movies a back to back feature. Find out the show time of "Guardians of the Galaxy" and set the show time of "Guardians of the Galaxy 2" to start two hours later.
 
-UPDATE movies SET (title, year, show_time) = ('Guardians of the Galaxy 2', 2017, '00:45') WHERE show_time = '22:45';
+UPDATE movies SET show_time = '19:15' WHERE title = 'Guardians of the Galaxy 2';
 SELECT * FROM movies;
 
 id |                title                | year | show_time
 ----+-------------------------------------+------+-----------
- 1 | Iron Man                            | 2008 | 23:40
- 2 | The Incredible Hulk                 | 2008 | 17:30
- 3 | Iron Man 2                          | 2010 | 20:40
- 4 | Thor                                | 2011 | 16:30
- 5 | Captain America: The First Avenger  | 2011 | 13:10
- 6 | Avengers Assemble                   | 2012 | 20:30
- 7 | Iron Man 3                          | 2013 | 23:05
- 8 | Thor: The Dark World                | 2013 | 23:10
- 9 | Batman Begins                       | 2005 | 18:00
-10 | Captain America: The Winter Soldier | 2014 | 16:10
-11 | Guardians of the Galaxy             | 2014 | 17:15
-12 | Avengers: Age of Ultron             | 2015 | 23:35
-13 | Ant-Man                             | 2015 | 15:00
-14 | Captain America: Civil War          | 2016 | 21:35
-15 | Doctor Strange                      | 2016 | 20:40
-17 | Spider-Man: Homecoming              | 2017 | 22:40
-18 | Thor: Ragnarok                      | 2017 | 17:40
-19 | Black Panther                       | 2018 | 22:00
-16 | Guardians of the Galaxy 2           | 2017 | 00:45
+  1 | Iron Man                            | 2008 | 23:40
+  2 | The Incredible Hulk                 | 2008 | 17:30
+  3 | Iron Man 2                          | 2010 | 20:40
+  4 | Thor                                | 2011 | 16:30
+  5 | Captain America: The First Avenger  | 2011 | 13:10
+  6 | Avengers Assemble                   | 2012 | 20:30
+  7 | Iron Man 3                          | 2013 | 23:05
+  8 | Thor: The Dark World                | 2013 | 23:10
+  9 | Batman Begins                       | 2005 | 18:00
+ 10 | Captain America: The Winter Soldier | 2014 | 16:10
+ 11 | Guardians of the Galaxy             | 2014 | 17:15
+ 12 | Avengers: Age of Ultron             | 2015 | 23:35
+ 13 | Ant-Man                             | 2015 | 15:00
+ 14 | Captain America: Civil War          | 2016 | 21:35
+ 15 | Doctor Strange                      | 2016 | 20:40
+ 17 | Spider-Man: Homecoming              | 2017 | 22:40
+ 18 | Thor: Ragnarok                      | 2017 | 17:40
+ 19 | Black Panther                       | 2018 | 22:00
+ 16 | Guardians of the Galaxy 2           | 2017 | 19:15
 (19 rows)
 
-9. Research how to delete multiple entries from your table in a single command.
+
+10. Research how to delete multiple entries from your table in a single command.
 
 1a. DELETE statement without specifying a WHERE clause
   eg. DELETE FROM movies;
