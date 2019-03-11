@@ -362,3 +362,5 @@ id |                title                | year | show_time
     REUSE title
     IGNORE DELETE TRIGGERS
     IMMEDIATE;
+
+1d. ALTER TABLE movies DROP COLUMN title;
